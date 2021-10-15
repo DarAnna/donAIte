@@ -11,6 +11,11 @@
 		95230680271A321500A185AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523067F271A321500A185AC /* SceneDelegate.swift */; };
 		95230682271A321500A185AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95230681271A321500A185AC /* ViewController.swift */; };
 		95230687271A321600A185AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95230686271A321600A185AC /* Assets.xcassets */; };
+		95230695271A353B00A185AC /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95230694271A353B00A185AC /* Organization.swift */; };
+		95230697271A35CA00A185AC /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95230696271A35CA00A185AC /* DataSourceProtocol.swift */; };
+		95230699271A35FC00A185AC /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95230698271A35FC00A185AC /* RemoteDataSource.swift */; };
+		9523069B271A362200A185AC /* MockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523069A271A362200A185AC /* MockDataSource.swift */; };
+		9523069D271A36CB00A185AC /* OrganizationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523069C271A36CB00A185AC /* OrganizationListVC.swift */; };
 		ED4F096C13715682D44674DB /* Pods_donAIte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D781FD8C50FAAA637636FB90 /* Pods_donAIte.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +26,11 @@
 		95230681271A321500A185AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95230686271A321600A185AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9523068B271A321600A185AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95230694271A353B00A185AC /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		95230696271A35CA00A185AC /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
+		95230698271A35FC00A185AC /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		9523069A271A362200A185AC /* MockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataSource.swift; sourceTree = "<group>"; };
+		9523069C271A36CB00A185AC /* OrganizationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListVC.swift; sourceTree = "<group>"; };
 		98249C2356CD922EE8E453B3 /* Pods-donAIte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donAIte.release.xcconfig"; path = "Target Support Files/Pods-donAIte/Pods-donAIte.release.xcconfig"; sourceTree = "<group>"; };
 		D781FD8C50FAAA637636FB90 /* Pods_donAIte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_donAIte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA491AED189B0638FD807837 /* Pods-donAIte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donAIte.debug.xcconfig"; path = "Target Support Files/Pods-donAIte/Pods-donAIte.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +78,9 @@
 		9523067C271A321500A185AC /* donAIte */ = {
 			isa = PBXGroup;
 			children = (
+				95230693271A351300A185AC /* UI */,
+				95230692271A350100A185AC /* Data */,
+				95230691271A34B000A185AC /* Model */,
 				9523067D271A321500A185AC /* AppDelegate.swift */,
 				9523067F271A321500A185AC /* SceneDelegate.swift */,
 				95230681271A321500A185AC /* ViewController.swift */,
@@ -75,6 +88,32 @@
 				9523068B271A321600A185AC /* Info.plist */,
 			);
 			path = donAIte;
+			sourceTree = "<group>";
+		};
+		95230691271A34B000A185AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95230694271A353B00A185AC /* Organization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95230692271A350100A185AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				95230696271A35CA00A185AC /* DataSourceProtocol.swift */,
+				95230698271A35FC00A185AC /* RemoteDataSource.swift */,
+				9523069A271A362200A185AC /* MockDataSource.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		95230693271A351300A185AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9523069C271A36CB00A185AC /* OrganizationListVC.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		EFC74ED2A9D8E379319AAD23 /* Frameworks */ = {
@@ -198,8 +237,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9523069B271A362200A185AC /* MockDataSource.swift in Sources */,
 				95230682271A321500A185AC /* ViewController.swift in Sources */,
 				9523067E271A321500A185AC /* AppDelegate.swift in Sources */,
+				95230697271A35CA00A185AC /* DataSourceProtocol.swift in Sources */,
+				95230695271A353B00A185AC /* Organization.swift in Sources */,
+				9523069D271A36CB00A185AC /* OrganizationListVC.swift in Sources */,
+				95230699271A35FC00A185AC /* RemoteDataSource.swift in Sources */,
 				95230680271A321500A185AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
