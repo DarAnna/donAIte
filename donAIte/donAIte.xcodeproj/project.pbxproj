@@ -16,6 +16,13 @@
 		95230699271A35FC00A185AC /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95230698271A35FC00A185AC /* RemoteDataSource.swift */; };
 		9523069B271A362200A185AC /* MockDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523069A271A362200A185AC /* MockDataSource.swift */; };
 		9523069D271A36CB00A185AC /* OrganizationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523069C271A36CB00A185AC /* OrganizationListVC.swift */; };
+		952306A0271AD96900A185AC /* OrganizationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523069F271AD96900A185AC /* OrganizationListViewModel.swift */; };
+		952306A2271ADA7600A185AC /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306A1271ADA7600A185AC /* OrganizationCell.swift */; };
+		952306A5271B06AB00A185AC /* OrganizationPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306A4271B06AB00A185AC /* OrganizationPageVC.swift */; };
+		952306A7271B06B700A185AC /* OrganizationPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306A6271B06B700A185AC /* OrganizationPageVM.swift */; };
+		952306AA271B079D00A185AC /* UserPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306A9271B079D00A185AC /* UserPageVC.swift */; };
+		952306AC271B07A800A185AC /* UserPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306AB271B07A800A185AC /* UserPageVM.swift */; };
+		952306AF271B141100A185AC /* ITButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952306AE271B141100A185AC /* ITButton.swift */; };
 		ED4F096C13715682D44674DB /* Pods_donAIte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D781FD8C50FAAA637636FB90 /* Pods_donAIte.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +38,13 @@
 		95230698271A35FC00A185AC /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		9523069A271A362200A185AC /* MockDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataSource.swift; sourceTree = "<group>"; };
 		9523069C271A36CB00A185AC /* OrganizationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListVC.swift; sourceTree = "<group>"; };
+		9523069F271AD96900A185AC /* OrganizationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationListViewModel.swift; sourceTree = "<group>"; };
+		952306A1271ADA7600A185AC /* OrganizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
+		952306A4271B06AB00A185AC /* OrganizationPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationPageVC.swift; sourceTree = "<group>"; };
+		952306A6271B06B700A185AC /* OrganizationPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationPageVM.swift; sourceTree = "<group>"; };
+		952306A9271B079D00A185AC /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
+		952306AB271B07A800A185AC /* UserPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVM.swift; sourceTree = "<group>"; };
+		952306AE271B141100A185AC /* ITButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITButton.swift; sourceTree = "<group>"; };
 		98249C2356CD922EE8E453B3 /* Pods-donAIte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donAIte.release.xcconfig"; path = "Target Support Files/Pods-donAIte/Pods-donAIte.release.xcconfig"; sourceTree = "<group>"; };
 		D781FD8C50FAAA637636FB90 /* Pods_donAIte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_donAIte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA491AED189B0638FD807837 /* Pods-donAIte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-donAIte.debug.xcconfig"; path = "Target Support Files/Pods-donAIte/Pods-donAIte.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,9 +125,48 @@
 		95230693271A351300A185AC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9523069C271A36CB00A185AC /* OrganizationListVC.swift */,
+				952306AD271B140100A185AC /* Commons */,
+				952306A8271B078500A185AC /* UserPage */,
+				952306A3271B069100A185AC /* OrganizationPage */,
+				9523069E271AD94C00A185AC /* List */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9523069E271AD94C00A185AC /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9523069C271A36CB00A185AC /* OrganizationListVC.swift */,
+				9523069F271AD96900A185AC /* OrganizationListViewModel.swift */,
+				952306A1271ADA7600A185AC /* OrganizationCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		952306A3271B069100A185AC /* OrganizationPage */ = {
+			isa = PBXGroup;
+			children = (
+				952306A4271B06AB00A185AC /* OrganizationPageVC.swift */,
+				952306A6271B06B700A185AC /* OrganizationPageVM.swift */,
+			);
+			path = OrganizationPage;
+			sourceTree = "<group>";
+		};
+		952306A8271B078500A185AC /* UserPage */ = {
+			isa = PBXGroup;
+			children = (
+				952306A9271B079D00A185AC /* UserPageVC.swift */,
+				952306AB271B07A800A185AC /* UserPageVM.swift */,
+			);
+			path = UserPage;
+			sourceTree = "<group>";
+		};
+		952306AD271B140100A185AC /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				952306AE271B141100A185AC /* ITButton.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		EFC74ED2A9D8E379319AAD23 /* Frameworks */ = {
@@ -237,14 +290,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952306A5271B06AB00A185AC /* OrganizationPageVC.swift in Sources */,
+				952306A2271ADA7600A185AC /* OrganizationCell.swift in Sources */,
 				9523069B271A362200A185AC /* MockDataSource.swift in Sources */,
 				95230682271A321500A185AC /* ViewController.swift in Sources */,
+				952306AC271B07A800A185AC /* UserPageVM.swift in Sources */,
 				9523067E271A321500A185AC /* AppDelegate.swift in Sources */,
 				95230697271A35CA00A185AC /* DataSourceProtocol.swift in Sources */,
 				95230695271A353B00A185AC /* Organization.swift in Sources */,
 				9523069D271A36CB00A185AC /* OrganizationListVC.swift in Sources */,
+				952306AF271B141100A185AC /* ITButton.swift in Sources */,
+				952306A7271B06B700A185AC /* OrganizationPageVM.swift in Sources */,
 				95230699271A35FC00A185AC /* RemoteDataSource.swift in Sources */,
+				952306AA271B079D00A185AC /* UserPageVC.swift in Sources */,
 				95230680271A321500A185AC /* SceneDelegate.swift in Sources */,
+				952306A0271AD96900A185AC /* OrganizationListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +440,6 @@
 				INFOPLIST_FILE = donAIte/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -409,7 +468,6 @@
 				INFOPLIST_FILE = donAIte/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

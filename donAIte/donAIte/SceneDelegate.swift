@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                window?.windowScene = windowScene
                let navigationVC = UINavigationController()
                window?.rootViewController = navigationVC
-               navigationVC.pushViewController(ViewController(), animated: false)
+               let vc = OrganizationListVC(collectionViewModel: OrganizationListViewModel(dataSource: MockDataSource()))
+               navigationVC.pushViewController(vc, animated: false)
                window?.makeKeyAndVisible()
     }
 
