@@ -98,7 +98,7 @@ public class OrganizationListVC: UIViewController, UICollectionViewDelegate, UIG
 //        titleContainer.backgroundColor = .orange
         topContainer.addSubview(titleContainer)
         titleContainer.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(-145)
+            make.right.equalToSuperview().offset(-150)
             make.top.equalToSuperview().offset(20)
             make.bottom.equalToSuperview()
         }
@@ -181,6 +181,7 @@ public class OrganizationListVC: UIViewController, UICollectionViewDelegate, UIG
         
             userButton.rx.tap.subscribe(onNext:{ [weak self] in
                 let vc = UserPageVC()
+                print("tap user")
                 self?.navigationController?.pushViewController(vc, animated: true)
             })
         )
