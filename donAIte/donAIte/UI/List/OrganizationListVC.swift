@@ -84,14 +84,15 @@ public class OrganizationListVC: UIViewController, UICollectionViewDelegate, UIG
         // User Button
 //        userButton.backgroundColor = .blue
         topContainer.addSubview(userButton)
+        
         userButton.snp.makeConstraints { make in
             make.width.equalTo(topContainer.snp.width).dividedBy(7)
             make.right.equalToSuperview().offset(-20)
             make.top.equalToSuperview().offset(40)
-            make.bottom.equalToSuperview()
+            //make.bottom.equalToSuperview()
         }
         userButton = makeTopContainerButton(title: "User", imageName: "user", view: userButton)
-        
+
 
         
         // App Title
@@ -118,15 +119,7 @@ public class OrganizationListVC: UIViewController, UICollectionViewDelegate, UIG
             make.bottom.equalToSuperview().multipliedBy(0.8)
             make.centerX.equalToSuperview()
         }
-//        let buttonLabel = UILabel()
-//        buttonLabel.text = title
-//        buttonLabel.font = .boldSystemFont(ofSize: 12)
-//        buttonLabel.textAlignment = .center
-//        view.addSubview(buttonLabel)
-//        buttonLabel.snp.makeConstraints { make in
-//            make.top.equalTo(button.snp.bottom)
-//            make.width.equalTo(view)
-//        }
+
         return button
     }
         
@@ -179,7 +172,7 @@ public class OrganizationListVC: UIViewController, UICollectionViewDelegate, UIG
                     self?.refreshControl.endRefreshing()
                 }),
         
-            userButton.rx.tap.subscribe(onNext:{ [weak self] in
+            userButton.rx.tap.subscribe(onNext:{ [weak self] _ in
                 let vc = UserPageVC()
                 print("tap user")
                 self?.navigationController?.pushViewController(vc, animated: true)
@@ -211,12 +204,4 @@ extension OrganizationListVC: UICollectionViewDelegateFlowLayout {
     }
     
 }
-
-////to be able to go to another view from cell
-//extension OrganizationListVC: EventCellHandlerProtocol {
-//    func countLabelTapped(organizations: [Organization]) {
-//        let vc = UserListViewController(viewModel: UserListViewModel(repository: ResolverFactory.shared.resolve(), useCase: .attendees, attendees: attendees))
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
-//}
 
